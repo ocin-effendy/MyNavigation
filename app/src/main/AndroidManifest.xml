@@ -13,6 +13,13 @@
         android:theme="@style/Theme.MyNavigation"
         tools:targetApi="31">
         <activity
+            android:name=".ProfileActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -20,6 +27,9 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <!-- deep link-->
+            <nav-graph android:value="@navigation/main_navigation" />
 
             <meta-data
                 android:name="android.app.lib_name"
